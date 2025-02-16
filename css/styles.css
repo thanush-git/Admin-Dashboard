@@ -1,11 +1,13 @@
 @font-face {
     font-family: 'IvyMode';
-    src: url('css/assets/font/IvyMode-Regular.woff2') format('woff2'),
-         url('css/assets/font/IvyMode-Regular.woff') format('woff'),
-         url('css/assets/font/IvyMode-Regular.ttf') format('truetype');
+    src: url('/assets/font/IvyMode-Regular.woff2') format('woff2'),
+         url('/assets/font/IvyMode-Regular.woff') format('woff'),
+         url('/assets/font/IvyMode-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+
+css/assets/font/IvyMode-Thin.woff2
 
 
 body{
