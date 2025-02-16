@@ -198,6 +198,20 @@ hr{
 }
 
 #dashboard-title{
+    color: #CC8800;
     padding-left: 25px;
     font-size: 40px;
+}
+
+.trending{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trend{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
 }
