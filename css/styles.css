@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'IvyMode';
+    src: url('/css/assets/font/IvyMode-Regular.woff2') format('woff2'),
+         url('/css/assets/font/IvyMode-Regular.woff') format('woff'),
+         url('/css/assets/font/IvyMode-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -8,7 +17,7 @@ body{
     display: grid;
     grid-template-columns: 1fr 6fr;
     grid-template-rows: 1fr 5fr;
-    background-color: #FFFCF2;
+    background-color: #F0E9DD;
     height: 100vh;
     width: 100vw;
 }
@@ -16,15 +25,24 @@ body{
 .header{
     grid-column: 2 / 2;
     grid-row: 1 / 1;
-    background-color: #CCC5B9;
+    background-color: #C62811;
 }
 
 .Sidebar{
     grid-column: 1 / 1;
     grid-row: 1 / 3;
-    background-color: #403D39;
+    background-color: #620300;
+    color: #E3DCD1;
+    font-family: 'IvyMode', serif;
+    display: flex;    
+    flex-direction: column;
 }
 
+.Sidebar > ul {
+    list-style: none;
+    font-size: 35px;
+    padding-left: 25px;
+}
 .icon{
     height: 30px;
 }
@@ -41,6 +59,7 @@ body{
     padding-top: 15px;
     padding-left: 25px;
     padding-right: 25px;
+    padding-bottom: 10px;
 }
 
 .header-grp{
@@ -68,13 +87,17 @@ input{
     border-radius: 20px;
     height: 25px;
     width: 40vw;
+    padding: 5px;
 }
 
 button{
     border: none;
     height: 40px;
     width: 80px;
-    border-radius: 25px;
+    border-radius: 30px;
+    background-color: #620300;
+    color: #F0E9DD;
+    font-size: large;
 }
 
 .header-controls{
@@ -87,3 +110,94 @@ button{
     font-weight: bold;
 }
 
+.card-container{
+    grid-column: 2 / 2;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 40px 1fr;
+    padding: 25px;
+    overflow: scroll;
+    gap: 25px;
+}
+
+#project-title, #announcement-title{
+    font-family: 'IvyMode', serif;    
+    font-weight: bold;
+    grid-row: 1 / 2;
+    font-size: 30px;
+}
+
+.projects{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 25px;
+}
+
+.project{
+    height: 200px;
+    background-color: #E3DCD1;
+    text-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    justify-content: space-between;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+
+}
+
+.project > span{
+    display: flex;
+    gap: 15px;
+    justify-content: end;
+}
+
+.project-content > h1 {
+    font-size: 20px;
+}
+
+.right-bar{
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 4fr 0.5fr 3fr;
+}
+
+.card{
+    background-color: #E3DCD1;
+    padding: 15px;
+    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+}
+
+.announcements{
+    grid-row: 1 / 1;  
+}
+
+hr{
+    border: 1px solid #403D39;
+}
+
+.trending{
+    grid-row: 3 / 3;
+}
+
+.announcement > h1{
+    font-size: 15px;
+}
+
+.announcement > p {
+    font-size: 15px;
+}
+
+#trend-title{
+    grid-row: 2 / 2;
+    font-family: 'IvyMode', serif;    
+    font-weight: bold;
+    font-size: 30px;
+}
+
+#dashboard-title{
+    padding-left: 25px;
+    font-size: 40px;
+}
